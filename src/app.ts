@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 import { fileURLToPath } from 'url';
 import * as path from 'path';
 

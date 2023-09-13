@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const qrcode = require('qrcode');
+import QRCode, { QRCodeToDataURLOptions } from 'qrcode';
 
-const qrOptions = {
+const qrOptions: QRCodeToDataURLOptions = {
   errorCorrectionLevel: 'H',
   margin: 1,
   color: {
@@ -12,7 +12,7 @@ const qrOptions = {
   width: 300,
 };
 
-const qr = await qrcode.toDataURL(
+const qr = await QRCode.toDataURL(
   'https://www.cooperelliottdev.com/',
   qrOptions
 );
@@ -26,7 +26,7 @@ router.post('/', async function (req, res, next) {
     res.redirect('/');
   } else {
     const input = req.body.message;
-    const newQr = await qrcode.toDataURL(input, qrOptions);
+    const newQr = await QRCode.toDataURL(input, qrOptions);
     res.render('index', { title: 'Bun Express EJS App', qrUrl: newQr });
   }
 });

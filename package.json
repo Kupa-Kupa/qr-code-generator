@@ -3,6 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.6.0",
+    "@types/qrcode": "^1.5.2",
     "bun-types": "latest"
   },
   "peerDependencies": {
