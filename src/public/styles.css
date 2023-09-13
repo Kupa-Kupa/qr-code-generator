@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2rem;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border: 1px solid darkblue;
+  border-radius: 4px;
+}
+
+button {
+  height: 100%;
+
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: darkblue;
+  color: antiquewhite;
+
+  border: 1px solid darkblue;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(12, 98, 179);
+}

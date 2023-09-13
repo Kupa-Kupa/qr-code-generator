@@ -1,4 +1,6 @@
-# qr-code-generator
+# QR Code Generator
+
+A simple static qr code generator using [node-qrcode](https://github.com/soldair/node-qrcode)
 
 To install dependencies:
 
@@ -9,7 +11,7 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun run src/app.ts
 ```
 
 This project was created using `bun init` in bun v1.0.1. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

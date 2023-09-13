@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <main>
+      <h1><%= locals.title %></h1>
+      <p>Enter a url or data below to generate a new QR Code</p>
+      <form action="/" method="post">
+        <input type="text" name="message" id="message" placeholder="new url" />
+        <button type="submit">New QR Code</button>
+      </form>
+      <img src="<%= locals.qrUrl %>" alt="qr code" />
+    </main>
+  </body>
+</html>

@@ -1,8 +1,11 @@
 try {
   const result = await Bun.build({
-    entrypoints: ['./src/index.ts'],
+    entrypoints: ['./src/app.ts'],
     outdir: './build',
-    minify: true,
+    // root: '.',
+    // external: ['*'],
+    minify: false,
+    sourcemap: 'external',
   });
 
   if (result.success) {
