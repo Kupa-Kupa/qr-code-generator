@@ -175,3 +175,7 @@ dist
 
 # build folder
 build
+
+
+# prettier
+.prettierignore

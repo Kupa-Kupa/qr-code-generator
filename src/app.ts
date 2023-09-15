@@ -1,11 +1,12 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import * as path from 'path';
+import dotenv from 'dotenv';
 
 const __dirname = fileURLToPath(path.dirname(import.meta.url));
 
 // configure dotenv
-require('dotenv').config();
+dotenv.config();
 
 import { router as indexRouter } from './routes/index.js';
 
@@ -20,6 +21,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 /* ----- run middleware ----- */
+// allows us to parse json bodies, e.g. json from a post request body
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
